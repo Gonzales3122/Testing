@@ -1,0 +1,10 @@
+{% include 'Page/navbar.html' %}
+{% block content %}
+    
+<form method="post" action="{% url 'reservation_view' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+</form>
+{% endblock %}
+{% include 'Page/footer.html' %}

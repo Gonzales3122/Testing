@@ -1,0 +1,13 @@
+<!-- templates/Page/reservation_detail.html -->
+{% extends 'Page/index.html' %}
+
+{% block content %}
+  <h2>Reservation Details</h2>
+  <p><strong>Name:</strong> {{ reservation.name }}</p>
+  <p><strong>Email:</strong> {{ reservation.email }}</p>
+  <p><strong>Date:</strong> {{ reservation.date }}</p>
+  <p><strong>Arrival Time:</strong> {{ reservation.arrival_time }}</p>
+  <p><strong>Vehicle Type:</strong> {{ reservation.vehicle_type }}</p>
+
+  <a href="{% url 'reservation_list' %}">Back to Reservation List</a>
+{% endblock %}

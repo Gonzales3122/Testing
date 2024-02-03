@@ -1,0 +1,16 @@
+<!-- templates/Page/reservation_list.html -->
+{% extends 'Page/index.html' %}
+
+{% block content %}
+  <h2>Reservation List</h2>
+  <ul>
+    {% for reservation in reservations %}
+      <li>
+        <a href="{% url 'reservation_detail' pk=reservation.id %}">{{ reservation.name }}</a>
+        <a href="{% url 'reservation_update' pk=reservation.id %}">(Edit)</a>
+        <a href="{% url 'reservation_delete' pk=reservation.id %}">(Delete)</a>
+      </li>
+    {% endfor %}
+  </ul>
+  <a href="{% url 'reservation_create' %}">Create a New Reservation</a>
+{% endblock %}

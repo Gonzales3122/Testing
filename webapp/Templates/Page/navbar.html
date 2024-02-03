@@ -1,0 +1,16 @@
+{% load static %}
+<nav>
+    <ul>
+        <li><image alt="logo" heighht="50vw" width="50vw" src="{% static 'images/logo2.ico' %}"></image></li>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css'%}">
+    <div class="menu">
+        <li><a id="ul" href="{% url 'home' %}">Home</a></li>
+        <li><a id="ul" href="{% url 'about' %}">About</a></li>
+        <li><a id="ul" href="{% url 'contact' %}">Contact</a></li>
+      
+        <li><a href="{% url 'reservation_view' %}">Reservation</a></li>
+
+    </div>
+    
+        </ul>
+</nav>

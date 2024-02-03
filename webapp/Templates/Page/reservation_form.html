@@ -1,0 +1,12 @@
+<!-- templates/Page/reservation_form.html -->
+{% extends 'Page/index.html' %}
+
+{% block content %}
+  <h2>Create/Update Reservation</h2>
+  <form method="post" action="{% if reservation.id %}{% url 'reservation_update' pk=reservation.id %}{% else %}{% url 'reservation_create' %}{% endif %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Save</button>
+  </form>
+  <a href="{% url 'reservation_list' %}">Back to Reservation List</a>
+{% endblock %}

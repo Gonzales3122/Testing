@@ -1,0 +1,72 @@
+{% load static %}
+{% include 'Page/navbar.html' %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css'%}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/footer.css'%}">
+<html>
+<head>
+    <title>About</title>
+<style>
+
+body {
+    margin: 0;
+    padding: 0;
+}
+.container_body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      
+    }
+
+    .container {
+      width: 70%;
+      max-width: 800px;
+      background-color: #fff;
+      padding: 20px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-top: 50px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    p {
+      text-align: justify;
+      line-height: 1.6;
+      color: #666;
+      text-align: center;
+    }
+</style>
+ </head>
+        
+        
+        <body>
+<h1>About us</h1>
+        <h1>Company's History</h1>
+            <p>
+            "Park Your Vehicle Now" is a parking management website that was designed and
+             created to provide and help students and faculty a convenient site to look for
+             available parking spaces for their vehicle.
+            </p>
+        <h1>Mission</h1>
+            <p>
+                To enhance liveability by providing clean and safe parking facilities, 
+                based on convenience and reliability.
+            </p>
+        <h1>Vision</h1>
+            <p>
+                We aim to be the most preferred and recommended parking partner based on 
+                functional quality, operational excellence, customer satisfaction, and sustainable
+                 performance.
+            </p>
+         
+</body>
+ </html>
+
+ {% include 'Page/footer.html' %}
